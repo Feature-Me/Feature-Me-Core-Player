@@ -1,7 +1,7 @@
 {
     "name": "feature-me-core-player",
     "version": "0.1.0",
-    "description": "",
+    "description": "Game core systems and brief editor for music game series Feature Me",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
