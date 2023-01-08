@@ -19,5 +19,7 @@ declare module '*.css' {
 }
 
 
-//phina.js module
+//modules
 declare module 'phina.js';
+declare module 'monaco-ace-tokenizer';
+declare module 'monaco-ace-tokenizer/lib/ace/definitions/elixir';
