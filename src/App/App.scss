@@ -51,6 +51,8 @@ body {
 
 * {
     box-sizing: border-box;
+    min-height: 0;
+    min-width: 0;
 }
 
 a {
@@ -79,6 +81,13 @@ h5,
 h6,
 p {
     margin: 0;
+}
+
+h1{
+    line-height: 64px;
+}
+h3{
+    line-height: 32px;
 }
 
 h1,
