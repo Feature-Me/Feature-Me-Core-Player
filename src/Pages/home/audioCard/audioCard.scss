@@ -1,0 +1,121 @@
+@import "../../../Assets/mixin.scss";
+
+.audio {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 32px 1fr;
+    background-image: linear-gradient(to right, $transparentAccent, transparent);
+    border-radius: 8px;
+    transition: 0.2s;
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: 0.2s;
+        border-radius: 8px;
+        background-image: linear-gradient(to right, $accentColor, transparent);
+    }
+
+    &:hover {
+        box-shadow: 0 0 4px 0 whitesmoke;
+
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    h3 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .uploadMenu {
+        height: 32px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 8px;
+    }
+
+    .audioInfo {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 8px;
+        padding: 0 8px;
+    }
+}
+
+
+.heading {
+    display: inline;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    backdrop-filter: brightness(0.8);
+    padding: 0 1em;
+}
+
+.uploadFile {
+    text-align: center;
+    background-image: linear-gradient(to right, transparent, $inputBackgroundColor, transparent);
+    transition: 0.2s;
+    margin: 4px;
+    border-radius: 4px;
+    padding: 0 4px;
+    min-height: 32px;
+
+    &:hover {
+        box-shadow: 0 0 4px 0 whitesmoke;
+        background-color: $inputForegroundColor;
+    }
+}
+
+.iconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+        height: 32px;
+        width: 32px;
+        transition: 0.2s;
+
+        &:hover {
+            color: $gray;
+        }
+    }
+
+}
+
+.player {
+    &[data-playing="true"] {
+        .play {
+            display: none;
+        }
+
+        .pause {
+            display: initial;
+        }
+    }
+
+    &[data-playing="false"] {
+        .play {
+            display: initial;
+        }
+
+        .pause {
+            display: none;
+        }
+    }
+}
