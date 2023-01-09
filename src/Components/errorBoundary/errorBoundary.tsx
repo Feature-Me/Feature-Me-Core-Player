@@ -34,11 +34,11 @@ class ErrorBoundary extends React.Component {
             return (
                 <div className={style.errorPage}>
                     <div className={style.errorDetails}>
-                        <h1>Game Crashed.</h1>
+                        <h1>Application Crashed.</h1>
                         <p>An Critical Error has occured.</p>
                         <div className={style.interaction}>
                             <ChamferedButton onClick={() => location.reload()} >Relaunch</ChamferedButton>
-                            <ChamferedButton onClick={() => window.open("https://github.com/Feature-Me/Feature-Me/issues")}>Report this issue</ChamferedButton>
+                            <ChamferedButton onClick={() => window.open("https://github.com/Feature-Me/Feature-Me-Core-Player/issues")}>Report this issue</ChamferedButton>
                         </div>
                         <div className={style.errorMessage}>
                             <p>Error details</p>

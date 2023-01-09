@@ -13,19 +13,19 @@ const ErrorModal: React.FC<{ message: string }> = (props) => {
         <div className={style.modal}>
             <div className={style.inner}>
                 <div className={style.titleBar}>
-                    <p>Game Crashed!</p>
+                    <p>Application crash handler</p>
                     <div className={style.closebtn}>
                         <VscClose onClick={setShow} />
                     </div>
                 </div>
-                <h2>Game Crashed!</h2>
+                <h2>Application Crashed!</h2>
                 <p>The game process has stopped because of below error(s)<br />
                     <code>{props.message}</code>
                 </p>
                 <div className={style.interaction}>
                     <ChamferedButton onClick={() => setShow()}>OK</ChamferedButton>
                     <ChamferedButton onClick={() => location.reload()} >Relaunch</ChamferedButton>
-                    <ChamferedButton onClick={() => window.open("https://github.com/Feature-Me/Feature-Me/issues")}>Report this issue</ChamferedButton>
+                    <ChamferedButton onClick={() => window.open("https://github.com/Feature-Me/Feature-Me-Core-Player/issues")}>Report this issue</ChamferedButton>
                 </div>
             </div>
         </div>
