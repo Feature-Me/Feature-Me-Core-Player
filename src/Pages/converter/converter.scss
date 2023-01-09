@@ -1,0 +1,8 @@
+.converter {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 48px 1fr;
+    row-gap: 16px;
+}
