@@ -8,7 +8,8 @@ const editorState = atom<editorStateType>({
     },
     errors: [],
     editorType:"void",
-    currentLanguage:"plaintext"
+    currentLanguage:"plaintext",
+    maximized:false
 });
 
 export default editorState;
