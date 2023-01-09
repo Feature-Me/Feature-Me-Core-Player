@@ -17,7 +17,7 @@
     }
 
     &.maximized {
-        transform:translate(-23%, 0) perspective(1000px) rotateY(-9.85deg) ;
+        transform: translate(-23%, 0) perspective(1000px) rotateY(-9.85deg);
         transform-origin: left;
         position: absolute;
         width: 200%;
@@ -60,10 +60,10 @@
 
 .uploadFileContainer {
     display: grid;
-    grid-template-columns: auto 1fr 48px;
+    grid-template-columns: minmax(140px, 280px) 1fr 48px;
     grid-template-rows: 1fr;
     align-items: center;
-    column-gap: 8px;
+    column-gap: 16px;
 
     .uploadFile {
         text-align: center;
@@ -72,10 +72,17 @@
         margin: 4px;
         border-radius: 4px;
         padding: 0 4px;
+        width: 100%;
 
         &:hover {
             box-shadow: 0 0 4px 0 whitesmoke;
             background-color: $inputForegroundColor;
+        }
+
+        &:active {
+            box-shadow: 0 0 4px 0 $accentColor;
+            background-color: $backgroundSubColor;
+            transform: scale(0.98);
         }
     }
 }
@@ -92,6 +99,10 @@
 
         &:hover {
             color: $accentColor;
+        }
+
+        &:active {
+            transform: scale(0.95);
         }
     }
 

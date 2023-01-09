@@ -13,8 +13,6 @@ import checkChartType from "Utils/checkChartType/checkChartType";
 import style from "./chartData.scss"
 import editorLanguageMap from "Features/editorLanguageMap/editorLanguageMap";
 
-
-
 const ChartData: React.FC = () => {
     const editorRef = React.useRef<monaco.editor.IStandaloneCodeEditor>();
     const [fileData, setFileData] = React.useState<File | null>(null);
@@ -77,6 +75,8 @@ const ChartData: React.FC = () => {
 
     React.useEffect(() => {
         window.addEventListener("resize", () => editorRef.current?.layout({} as monaco.editor.IDimension))
+
+        document.title = "Home - Feature Me Core Player";
         return () => {
             window.removeEventListener("resize", () => editorRef.current?.layout({} as monaco.editor.IDimension))
             editorRef.current?.dispose();
