@@ -18,7 +18,6 @@ const ChartData: React.FC = () => {
     const [fileData, setFileData] = React.useState<File | null>(null);
     const setChartData = useSetAtom(chartState);
     const [editorInfo, setEditorInfo] = useAtom(editorState);
-    const [maximized, setMaximized] = React.useState(false);
 
     function uploadFile(e: React.ChangeEvent<HTMLInputElement> | null) {
         const files = e?.target.files
@@ -84,7 +83,7 @@ const ChartData: React.FC = () => {
     }, [])
 
     return (
-        <div className={`${style.chartEditor} ${maximized && style.maximized}`}>
+        <div className={`${style.chartEditor} ${editorInfo.maximized && style.maximized}`}>
             <h3 className={style.heading}>Chart Data - {editorInfo.editorType} </h3>
             <div className={style.editor} onScroll={e => { e.preventDefault(); e.stopPropagation() }}>
                 <Editor
@@ -120,9 +119,9 @@ const ChartData: React.FC = () => {
                 {
                     fileData ? fileData.name : "No file chosen."
                 }
-                <div className={`${style.iconWrapper} ${style.switcher}`} data-maximized={String(maximized)}>
-                    <BsBoxArrowUpRight onClick={() => setMaximized(true)} className={`${style.icon} ${style.maximize}`} />
-                    <BsBoxArrowInDownLeft onClick={() => setMaximized(false)} className={`${style.icon} ${style.restore}`} />
+                <div className={`${style.iconWrapper} ${style.switcher}`} data-maximized={String(editorInfo.maximized)}>
+                    <BsBoxArrowUpRight onClick={() => setEditorInfo(i => { return { ...i, maximized: true } })} className={`${style.icon} ${style.maximize}`} />
+                    <BsBoxArrowInDownLeft onClick={() => setEditorInfo(i => { return { ...i, maximized: false } })} className={`${style.icon} ${style.restore}`} />
                 </div>
             </div>
         </div>
