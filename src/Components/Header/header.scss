@@ -1,0 +1,22 @@
+@import "../../Assets/mixin.scss";
+
+.header {
+    height: 48px;
+    text-shadow: 2px 2px 4px $secondaryText;
+    background-color: $accentColor;
+    box-shadow: 0 0 8px 4px $accentColor;
+    padding: 0 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: grid;
+    grid-template-columns: 1fr repeat(2,auto);
+    grid-template-rows: 1fr;
+    align-items: center;
+    column-gap: 16px;
+
+    h1{
+        height: 48px;
+        line-height: 48px;
+    }
+}
