@@ -57,7 +57,7 @@ const AudioCard: React.FC = () => {
     const uploadMenu = (
         <div className={style.uploadMenu}>
             <h3>No file chosen.</h3>
-            <label htmlFor="musicFileUploadInput" className={style.uploadFile}>
+            <label htmlFor="musicFileUploadInput" className={style.uploadFile} >
                 Click to upload audio file
             </label>
         </div>

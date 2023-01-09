@@ -78,6 +78,12 @@
     &:hover {
         box-shadow: 0 0 4px 0 whitesmoke;
         background-color: $inputForegroundColor;
+        
+    }
+    &:active{
+        box-shadow: 0 0 4px 0 $accentColor;
+        background-color: $backgroundSubColor;
+        transform: scale(0.98);
     }
 }
 
@@ -93,6 +99,9 @@
 
         &:hover {
             color: $gray;
+        }
+        &:active{
+            transform: scale(0.95);
         }
     }
 
