@@ -5,12 +5,13 @@ import ChamferedButton from "Components/Button/chamferedButton/chamferedButton";
 import style from "./home.scss";
 import AudioCard from "./audioCard/audioCard";
 import ChartData from "./chartData/chartData";
+import Header from "Components/Header/header";
 
 
 const Home: React.FC = () => {
     return (
         <div className={style.home}>
-            <h1>Feature Me Core Player</h1>
+            <Header />
             <div className={style.content}>
                 <div className={style.editor}>
                     <AudioCard />

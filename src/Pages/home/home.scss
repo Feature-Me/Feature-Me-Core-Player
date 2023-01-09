@@ -5,18 +5,9 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 64px 1fr;
+    grid-template-rows: 48px 1fr;
+    row-gap: 16px;
 
-    h1 {
-        text-shadow: 2px 2px 4px $secondaryText;
-        background-color: $accentColor;
-        backdrop-filter: brightness(0.8);
-        box-shadow: 0 0 8px 4px $accentColor;
-        padding: 0 16px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
 
     .content {
         height: 100%;
