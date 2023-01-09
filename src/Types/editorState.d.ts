@@ -6,7 +6,8 @@ type editorStateType = {
     },
     errors: Array<monaco.editor.IMarker>
     editorType: "Feature Me Alpha JSON (.json)" | "Feature Me Blossom Chart (.fmc)" | "Feature Me JSON5 (.fmc)" | "Another File" | "void"
-    currentLanguage:string
+    currentLanguage: string
+    maximized: boolean
 }
 
 export default editorStateType
